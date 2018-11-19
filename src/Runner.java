@@ -1,4 +1,4 @@
-//Dylan Yabg APCS Java Period 2-3
+//Dylan Yang APCS Java Period 2-3
 public class Runner {
 
     public static void main(String[] args) {
@@ -7,15 +7,27 @@ public class Runner {
         String[] stringArray = {"Toothpick", "Brush", "Water", "Apple"};
 
         System.out.println("Unsorted Int Array \n" + java.util.Arrays.toString(intArray));
+        long start = System.nanoTime();
         InPlaceSorts.insertionSort(intArray);
-        System.out.println("Sorted Int Array \n" + java.util.Arrays.toString(intArray));
+        long end = System.nanoTime();
+        long time = end - start;
+        System.out.println("Insertion sort took about : " + (time / 1000) + " Microseconds");
+        System.out.println("Sorted Int Array \n" + java.util.Arrays.toString(intArray) + "\n");
 
         System.out.println("Unsorted Double Array \n" + java.util.Arrays.toString(doubleArray));
+        start = System.nanoTime();
         InPlaceSorts.selectionSort(doubleArray);
-        System.out.println("Sorted Double Array \n" + java.util.Arrays.toString(doubleArray));
+        end = System.nanoTime();
+        time = end - start;
+        System.out.println("Selection sort took about : " + (time / 1000) + " Microseconds");
+        System.out.println("Sorted Double Array \n" + java.util.Arrays.toString(doubleArray) + "\n");
 
         System.out.println("Unsorted String Array \n" + java.util.Arrays.toString(stringArray));
+        start = System.nanoTime();
         InPlaceSorts.bubbleSort(stringArray);
+        end = System.nanoTime();
+        time = end - start;
+        System.out.println("Selection sort took about : " + (time / 1000) + " Microseconds");
         System.out.println("Sorted String Array \n" + java.util.Arrays.toString(stringArray));
     }
 }

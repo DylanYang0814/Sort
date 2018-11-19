@@ -1,4 +1,4 @@
-//Dylan Yabg APCS Java Period 2-3
+//Dylan Yang APCS Java Period 2-3
 public class InPlaceSorts {
     /**
      * This method swapCount 2 double in the double array arr
