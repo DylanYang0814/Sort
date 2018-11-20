@@ -5,6 +5,7 @@ public class Runner {
         int[] intArray = InPlaceSorts.generateIntArr(100, 100);
         double[] doubleArray = InPlaceSorts.generateDoubleArr(100, 100);
         String[] stringArray = {"Toothpick", "Brush", "Water", "Apple"};
+        int[] intArrayForMerge = InPlaceSorts.generateIntArr(100,100);
 
         System.out.println("Unsorted Int Array \n" + java.util.Arrays.toString(intArray));
         long start = System.nanoTime();
@@ -28,6 +29,14 @@ public class Runner {
         end = System.nanoTime();
         time = end - start;
         System.out.println("Selection sort took about : " + (time / 1000) + " Microseconds");
-        System.out.println("Sorted String Array \n" + java.util.Arrays.toString(stringArray));
+        System.out.println("Sorted String Array \n" + java.util.Arrays.toString(stringArray) + "\n");
+
+        System.out.println("Unsorted Int Array \n" + java.util.Arrays.toString(intArrayForMerge));
+        start = System.nanoTime();
+        mergeSort.mergeSort(intArrayForMerge);
+        end = System.nanoTime();
+        time = end - start;
+        System.out.println("Merge sort took about : " + (time / 1000) + " Microseconds");
+        System.out.println("Sorted Int Array using merge sort \n" + java.util.Arrays.toString(intArrayForMerge));
     }
 }
