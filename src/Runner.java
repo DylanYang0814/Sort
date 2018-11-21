@@ -4,7 +4,7 @@ public class Runner {
     public static void main(String[] args) {
         int[] intArray = InPlaceSorts.generateIntArr(100, 100);
         double[] doubleArray = InPlaceSorts.generateDoubleArr(100, 100);
-        String[] stringArray = {"Toothpick", "Brush", "Water", "Apple"};
+        String[] stringArray = InPlaceSorts.randomStringArr(26,5);
         int[] intArrayForMerge = InPlaceSorts.generateIntArr(100,100);
 
         System.out.println("Unsorted Int Array \n" + java.util.Arrays.toString(intArray));

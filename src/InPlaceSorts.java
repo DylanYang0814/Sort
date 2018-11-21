@@ -55,6 +55,25 @@ public class InPlaceSorts {
         return arr;
     }
 
+    public static String[] randomStringArr(int count, int range)
+    {
+        String[] arr = new String[count];
+        while(count>0)
+        {
+            int i = 0;
+            String s = "";
+            while(i<range)
+            {
+                char c = (char)((Math.random()*26)+97);
+                s = s+ c;
+                i++;
+            }
+            count--;
+            arr[count] =s;
+        }
+        return arr;
+    }
+
     /**
      * The insertion takes each element from the array, and adds it to the front of the array in the correct order.
      * @param arr
